@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Powerful School Tutor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="/Imgs/Mybib.png" id="img1" alt="My Bib Logo">
+        <div class="text-container">
+            <h1>My Bib</h1>
+            <p>The easiest way to cite your sources</p>
+            <p class="additional-text">
+                If you’re dealing with academic writing or research, you really should check out MyBib. It makes handling citations and bibliographies a breeze. Instead of spending ages on formatting, MyBib does the heavy lifting for you, generating citations in styles like APA, MLA, and Chicago with just a few clicks. It’s a huge time-saver and ensures your citations are spot-on.
+
+                Creating a bibliography can be a real pain, especially if you’ve got a lot of sources. MyBib takes care of that too, automatically putting together a neat and organized bibliography so you don’t have to. Its design is super user-friendly, making it easy for everyone from seasoned researchers to students just getting started.
+                
+                MyBib also integrates with various research tools, letting you pull citation data directly from sources like <a href="/Learning tools/" class="google-link no-style">Google</a> Scholar and library catalogs. This means less manual entry and fewer mistakes. Plus, if you’re working on a group project, MyBib lets you share your bibliography with others, keeping everything consistent and organized.
+                
+                It’s cloud-based, so you can access it from any device, whether you’re on your laptop, tablet, or phone. And the best part? It’s free, so you get all these great features without spending a dime.
+                
+                Using MyBib not only helps you avoid plagiarism but also shows you’re serious about maintaining high academic standards. It’s a simple tool that can really make a difference in managing your research and boosting your academic success.
+            </p>
+        </div>
+    </header>
+
+    <section id="buttonss">
+        <a href="/Learning tools/">
+            <button class="buttons">Learning tools</button>
+        </a>
+        <a href="/Expert_Tips/Index.html">
+            <button class="buttons">Expert Tips</button>
+        </a>
+        <a href="/Calculator/index.html">
+            <button class="buttons">Scientific Calculator</button>
+        </a>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Powerful School Tutor. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          var url = "/MAIN/index.html"; // Update this to the path of your local HTML file
+          var link = document.querySelector('a.google-link.no-style'); // Ensure the link has both classes
+          var win = null; // Declare win here to be accessible in the function
+  
+          if (link) {
+            link.onclick = function(event) {
+              event.preventDefault(); // Prevent the default link action
+  
+              if (win) {
+                win.focus();
+              } else {
+                win = window.open();
+                win.document.body.style.margin = '0';
+                win.document.body.style.height = '100vh';
+                var iframe = win.document.createElement('iframe');
+                iframe.style.border = 'none';
+                iframe.style.width = '100%';
+                iframe.style.height = '100%';
+                iframe.style.margin = '0';
+                iframe.src = url;
+                win.document.body.appendChild(iframe);
+              }
+            };
+          }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6a0dad, #333); /* Purple gradient background */
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 1vw; /* Further reduced padding for a smaller header */
+    box-shadow: 0 0.2vw 0.5vw rgba(0, 0, 0, 0.3); /* Further reduced shadow size */
+}
+
+.logo h1 {
+    color: #b09fe7;
+    font-size: 1.5vw; /* Further reduced font size for the logo */
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1vw; /* Further reduced gap between nav items */
+}
+
+nav ul li a {
+    font-size: 1vw; /* Further reduced font size for nav items */
+    padding: 0.6vw; /* Further reduced padding for nav items */
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #b09fe7;
+}
+
+.games {
+    width: 20vw; /* Responsive width */
+    height: 20vw; /* Responsive height */
+    max-width: 200px; /* Ensure the image doesn’t get too large */
+    max-height: 200px; /* Ensure the image doesn’t get too large */
+    border: none;
+    border-radius: 20px; /* Consistent border radius */
+    margin: 2vw; /* Responsive margin */
+    transition: border 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.games:hover {
+    border: 0.2vw solid green; /* Responsive border */
+    transform: scale(1.05); /* Slightly scale up the image */
+}
+
+.btnpar {
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    flex-wrap: wrap;         /* Allows wrapping of items if needed */
+    padding: 2vw; /* Responsive padding */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 4vw; /* Adjust font size for smaller screens */
+    }
+
+    nav ul {
+        gap: 1vw; /* Adjust gap for smaller screens */
+    }
+
+    nav ul li a {
+        font-size: 3vw; /* Adjust font size for smaller screens */
+        padding: 0.5vw; /* Adjust padding for smaller screens */
+    }
+
+    .games {
+        width: 25vw; /* Adjust width for smaller screens */
+        height: 25vw; /* Adjust height for smaller screens */
+    }
+
+    .btnpar {
+        padding: 1vw; /* Adjust padding for smaller screens */
+    }
+}
